@@ -1,3 +1,6 @@
 <mat-toolbar color="primary">
   <span>My store</span>
+
+  <span>Total {{total$ | async | currency}}</span>
+  <span>Quantity {{quantity$ | async}}</span>
 </mat-toolbar>
