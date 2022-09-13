@@ -1,0 +1,19 @@
+<!-- <ng-container *ngIf="{ total: total$ | async, quantity: quantity$ | async } as data">
+  <mat-icon>add_shopping_cart</mat-icon>
+  <span>Total {{ data.total | currency }}</span>
+  <span>Quantity {{ data.quantity }}</span>
+</ng-container> -->
+
+<mat-icon>add_shopping_cart</mat-icon>
+
+<span>
+  Total 
+  <span *ngIf="total$ | async as total; else waiting">{{ total | currency }}</span>
+</span>
+
+<span>
+  Quantity
+  <span *ngIf="quantity$ | async as quantity; else waiting">{{ quantity }}</span>
+</span>
+
+<ng-template #waiting>0</ng-template>
