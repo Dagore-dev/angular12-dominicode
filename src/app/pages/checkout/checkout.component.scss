@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  align-items: center;
+  padding: 1rem 5rem;
+
+  .item {
+    flex: 1 1 auto;
+  }
+
+  .form {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .form__element {
+    padding: 5px 0px 25px 2px;
+    width: 100%;
+    margin-bottom: .5rem;
+
+    &--options {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+  
+  &__button {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .container {
+    .form {
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      padding: 1rem;
+    }
+  }
+}

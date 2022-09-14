@@ -1,5 +1,5 @@
 <div class="container">
-  <form>
+  <form class="form item">
     <mat-form-field class="form__element">
       <input 
         matInput
@@ -16,12 +16,14 @@
 
     <mat-radio-group class="form__element">
       <p>Choose an option: </p>
-      <mat-radio-button value="PICKUP" (change)="onSelectedOption('PICKUP')">
-        Pickup
-      </mat-radio-button>
-      <mat-radio-button value="DELIVERY" (change)="onSelectedOption('DELIVERY')">
-        Delivery
-      </mat-radio-button>
+      <div class="form__element--options">
+        <mat-radio-button value="PICKUP" (change)="onSelectedOption('PICKUP')">
+          Pickup
+        </mat-radio-button>
+        <mat-radio-button value="DELIVERY" (change)="onSelectedOption('DELIVERY')">
+          Delivery
+        </mat-radio-button>
+      </div>
     </mat-radio-group>
 
     <mat-form-field class="form__element">
@@ -52,5 +54,16 @@
         </mat-option>
       </mat-select>
     </mat-form-field>
+
+    <div class="container__button">
+      <button 
+        [disabled]=""
+        mat-raised-button
+        color="primary"
+        type="submit"
+        >
+        Checkout
+      </button>
+    </div>
   </form>
 </div>
